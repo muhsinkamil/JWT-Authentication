@@ -8,6 +8,24 @@ const userSchema = new Schema({
     password: String
 })
 
+// on save, encrypt password
+// Before saving, a) generate salt    b) hash the password with salt and save. 
+userSchema.pre('save', function(next){
+    const user = this
+
+    bcrypt.genSalt(10, function(err, salt){
+        if (err) { return next(err) }
+
+        bcrypt.hash(user.password, salt, null, function(err, hash){
+            if (err) { return next(err) }
+
+            // save the hashed password
+            user.password = hash
+            next()
+        })
+    })
+})
+
 // Create the model class
 const ModelClass = mongoose.model('user', userSchema)
 
