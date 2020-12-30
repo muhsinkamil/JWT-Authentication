@@ -11,6 +11,7 @@ const userSchema = new Schema({
 // on save, encrypt password
 // Before saving, a) generate salt    b) hash the password with salt and save. 
 userSchema.pre('save', function(next){
+    // get access to the user model
     const user = this
 
     bcrypt.genSalt(10, function(err, salt){
