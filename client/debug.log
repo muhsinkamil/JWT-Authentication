@@ -1,0 +1,3 @@
+[0103/195208.789:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0104/165603.791:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0104/165603.807:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Sathaq\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\5a7aa596-8c0b-4693-9850-870ec52e020b: The system cannot find the path specified. (0x3)

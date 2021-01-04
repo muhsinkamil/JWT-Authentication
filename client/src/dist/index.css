@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  background: #a52a2a;
+}
+
+nav ul {
+  list-style-type: none;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=index.css.map */
