@@ -26,6 +26,11 @@ nav ul {
 nav ul a {
   color: white;
   font-size: 20px;
+  padding: 10px;
   text-decoration: none;
+}
+
+nav ul a:hover {
+  background: #803b3b;
 }
 /*# sourceMappingURL=index.css.map */

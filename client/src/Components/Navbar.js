@@ -7,7 +7,7 @@ class Navbar extends Component {
       <nav className="navbar">
         <ul>
           <li>
-            <Link to="/" className="tags">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/signup">Sign up</Link>
@@ -17,6 +17,9 @@ class Navbar extends Component {
           </li>
           <li>
             <Link to="/signout">Sign out</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>
           </li>
         </ul>
       </nav>
