@@ -5,18 +5,26 @@ class Signup extends Component {
   onSubmit = (formValues) => {
     console.log(formValues)
   }
-  
+
   render() {
     return (
-      <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-        <label>Email</label>
-        <Field name="email" type="text" component="input" autoComplete="off" />
+      <form
+        onSubmit={this.props.handleSubmit(this.onSubmit)}
+        className="signup-form"
+      >
+        <Field
+          name="email"
+          type="text"
+          component="input"
+          placeholder="mymail@example.com"
+          autoComplete="off"
+        />
 
-        <label>Password</label>
         <Field
           name="password"
           type="password"
           component="input"
+          placeholder="Password"
           autoComplete="off"
         />
 
