@@ -4,7 +4,7 @@ import { Field, reduxForm } from "redux-form"
 import { compose } from "redux"
 import { connect } from "react-redux"
 
-import { signup } from "../Actions"
+import { signup } from "../../Actions"
 
 class Signup extends Component {
   onSubmit = (formValues) => {

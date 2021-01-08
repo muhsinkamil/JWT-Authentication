@@ -1,4 +1,5 @@
 import React from 'react'
+import requireAuth from './requireAuth'
 
 const Products = () => {
     return (
@@ -6,4 +7,4 @@ const Products = () => {
     )
 }
 
-export default Products
+export default requireAuth(Products)

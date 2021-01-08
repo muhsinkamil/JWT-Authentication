@@ -4,7 +4,7 @@ import "../dist/index.css"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Products from "./Products"
 import Home from "./Home"
-import Signup from "./Signup"
+import Signup from "./Auth/Signup"
 import PageNotFound from './PageNotFound'
 
 function App() {
