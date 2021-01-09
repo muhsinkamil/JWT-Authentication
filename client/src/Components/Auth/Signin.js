@@ -1,15 +1,14 @@
 import React, { Component } from "react"
+import { connect } from "react-redux"
+import { compose } from "redux"
 import { Field, reduxForm } from "redux-form"
 
-import { compose } from "redux"
-import { connect } from "react-redux"
+import { signin } from "../../Actions"
 
-import { signup } from "../../Actions"
-
-class Signup extends Component {
+class Signin extends Component {
   onSubmit = (formValues) => {
-    this.props.signup(formValues, () => {
-      this.props.history.push('/products')
+    this.props.signin(formValues, () => {
+        this.props.history.push('/')
     })
   }
 
@@ -19,7 +18,7 @@ class Signup extends Component {
         onSubmit={this.props.handleSubmit(this.onSubmit)}
         className="form-group"
       >
-        <h3>Sign up here</h3>
+        <h3>Sign in !!</h3>
         <Field
           name="email"
           type="email"
@@ -27,7 +26,6 @@ class Signup extends Component {
           placeholder="Your email"
           autoComplete="off"
         />
-
         <Field
           name="password"
           type="password"
@@ -35,22 +33,18 @@ class Signup extends Component {
           placeholder="Password"
           autoComplete="off"
         />
-
-        <div className="form-error">{this.props.errorMessage}</div>
-
-        <button>Submit</button>
+        <div>{ this.props.errorMessage }</div>
+        <button>Sign in</button>
       </form>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  return {
-    errorMessage: state.auth.errorMessage,
-  }
+  return { errorMessage: state.auth.errorMessage }
 }
 
 export default compose(
-  connect(mapStateToProps, { signup }),
-  reduxForm({ form: "signup" })
-)(Signup)
+  connect(mapStateToProps, { signin }),
+  reduxForm({ form: "signin" })
+)(Signin)
